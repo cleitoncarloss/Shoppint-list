@@ -11,3 +11,7 @@ img {
 a {
   text-decoration: none;
 }
+
+body {
+  font-family: sans-serif;
+}
