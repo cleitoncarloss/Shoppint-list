@@ -7,11 +7,8 @@
 img {
   max-width: 100;
 }
-
-a {
-  text-decoration: none;
-}
-
+ 
 body {
   font-family: sans-serif;
+  margin: 0;
 }
