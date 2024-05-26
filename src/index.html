@@ -6,10 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lista de Compras</title>
   <link href="css/reset.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
 </head>
 
 <body>
+
   <c-header></c-header>
+
+  <main class='content'>
+    <div class='content__container'>
+      <section class='content__card'>
+        <h2 class='content__title'>Crie sua lista de compras</h2>
+        <div class='content__inputs'>
+          <input class='content__value' type='text' placeholder='Digite aqui...'>
+          <input class='content__save' type='button' value='salvar'>
+        </div>
+      </section>
+    </div>
+  </main>
 
   <script src='./scripts/header.js'></script>
 
