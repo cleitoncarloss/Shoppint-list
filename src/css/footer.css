@@ -1,0 +1,12 @@
+.footer {
+  bottom: 20px;
+  left: 50%;
+  margin: 0 auto;
+  max-width: 1440px;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.footer__information {
+  display: block ruby;
+}
