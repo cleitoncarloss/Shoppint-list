@@ -1,0 +1,41 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 24px;
+}
+
+.content__container {
+  align-items: center;
+  display: flex;
+  border: 1px solid #dadadf;
+  border-radius: 10px;
+  justify-content: space-between;
+  max-width: 670px;
+  padding: 10px;
+}
+
+.content__figure {
+  display: flex;
+  gap: 15px;
+}
+
+.content__buttonEdit, 
+.content__buttonDelete {
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+}
+
+@media(width >= 670px) {
+  .content {
+    padding: 24px 0 0 0; 
+    width: fit-content;
+  }
+
+  .content__container {
+    width: 600px;
+  }
+}
