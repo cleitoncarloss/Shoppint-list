@@ -10,7 +10,9 @@ class Header extends HTMLElement {
 
       <header class='header'>
         <div class='header__container'>
-          <img class='header__logo' src='./images/logo.png' alt='imagem do logo' />
+          <a href='../index.html'>
+            <img class='header__logo' src='./images/logo.png' alt='imagem do logo' />
+          </a>
 
           <nav class='header__navigation'>
             <a class='header__link' href="../index.html">home</a>
