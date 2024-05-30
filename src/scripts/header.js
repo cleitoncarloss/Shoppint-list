@@ -9,15 +9,17 @@ class Header extends HTMLElement {
       <link rel="stylesheet" href="../css/header.css" />      
 
       <header class='header'>
-        <img class='header__logo' src='./images/logo.png' alt='imagem do logo' />
+        <div class='header__container'>
+          <img class='header__logo' src='./images/logo.png' alt='imagem do logo' />
 
-        <nav class='header__navigation'>
-          <a class='header__link' href="../index.html">home</a>
-          <a class='header__link' href="../lista.html">ver lista</a>
-          <div class='header__button'>
-            <div class='header__ball'></div>
-          </div>
-        </nav>
+          <nav class='header__navigation'>
+            <a class='header__link' href="../index.html">home</a>
+            <a class='header__link' href="../lista.html">ver lista</a>
+            <div class='header__button'>
+              <div class='header__ball'></div>
+            </div>
+          </nav>
+        </div>
       </header>
     `
 
