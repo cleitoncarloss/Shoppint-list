@@ -1,6 +1,9 @@
 .header {
-  align-items: center;
   background-color: #dadadf;
+}
+
+.header__container {
+  align-items: center;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
