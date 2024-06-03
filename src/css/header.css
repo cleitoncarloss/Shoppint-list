@@ -52,3 +52,15 @@
   left: 60%;
   transition: 0.2s ease;
 }
+
+.darkHeader {
+  background-color: #231e1e;
+
+  a {
+    color: #fff;
+  }
+}
+
+.darkBody {
+  background-color: #202327;
+}

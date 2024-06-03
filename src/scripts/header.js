@@ -30,6 +30,8 @@ class Header extends HTMLElement {
 
   darkMode() {
     this.shadowRoot.querySelector('.header__ball').classList.toggle('active')
+    this.shadowRoot.querySelector('.header').classList.toggle('darkHeader')
+    document.querySelector('body').classList.toggle('darkBody')
   }
 }
 
