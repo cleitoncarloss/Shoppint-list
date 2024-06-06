@@ -38,7 +38,7 @@
   width: 80px;
 }
 
-.header__ball {
+.header__circle {
   border-radius: 50%;
   background-color: #9E9EA4;
   height: 25px;
@@ -48,19 +48,11 @@
   width: 30px;
 }
 
+.header__circle.active {
+  background-color: red;
+}
+
 .active {
   left: 60%;
   transition: 0.2s ease;
-}
-
-.darkHeader {
-  background-color: #231e1e;
-
-  a {
-    color: #fff;
-  }
-}
-
-.darkBody {
-  background-color: #202327;
 }

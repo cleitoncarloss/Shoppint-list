@@ -18,7 +18,7 @@ class Header extends HTMLElement {
             <a class='header__link' href="../index.html">home</a>
             <a class='header__link' href="../lista.html">ver lista</a>
             <div class='header__button'>
-              <div class='header__ball'></div>
+              <div class='header__circle'></div>
             </div>
           </nav>
         </div>
@@ -29,9 +29,7 @@ class Header extends HTMLElement {
   }
 
   darkMode() {
-    this.shadowRoot.querySelector('.header__ball').classList.toggle('active')
-    this.shadowRoot.querySelector('.header').classList.toggle('darkHeader')
-    document.querySelector('body').classList.toggle('darkBody')
+    this.shadowRoot.querySelector('.header__circle').classList.toggle('active')
   }
 }
 
