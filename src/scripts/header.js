@@ -24,12 +24,25 @@ class Header extends HTMLElement {
         </div>
       </header>
     `
+    const theme = localStorage.getItem('mode')
+    if (theme) {
+      document.querySelector('body').classList.add('dark')
+      this.shadowRoot.querySelector('.header__circle').classList.add('active')
+    }
 
     this.shadowRoot.querySelector('.header__button').addEventListener('click', this.darkMode.bind(this))
   }
 
   darkMode() {
     this.shadowRoot.querySelector('.header__circle').classList.toggle('active')
+    const body = document.querySelector('body')
+    body.classList.toggle('dark')
+
+    if (body.classList.contains('dark')) {
+      localStorage.setItem('mode', 'dark')
+    } else {
+      localStorage.removeItem('mode')
+    }
   }
 }
 
