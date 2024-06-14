@@ -1,5 +1,9 @@
+body {
+  background-color: var(--color-body-light);
+}
+
 .header {
-  background-color: #dadadf;
+  background-color: var(--color-light-light);
 }
 
 .header__container {
@@ -23,7 +27,7 @@
 }
 
 .header__link {
-  color:  #363130;
+  color: var(--color-link-light);
   text-decoration: none;
 }
 
@@ -46,10 +50,6 @@
   left: 0;
   transition: 0.2s ease;
   width: 30px;
-}
-
-.header__circle.active {
-  background-color: red;
 }
 
 .active {

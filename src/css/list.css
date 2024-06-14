@@ -22,6 +22,10 @@
   gap: 15px;
 }
 
+.content__list {
+  color: var(--color-list-light);
+}
+
 .content__buttonEdit, 
 .content__buttonDelete {
   cursor: pointer;
