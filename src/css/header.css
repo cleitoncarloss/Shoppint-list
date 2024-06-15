@@ -1,5 +1,9 @@
+body {
+  background-color: var(--color-body-light);
+}
+
 .header {
-  background-color: #dadadf;
+  background-color: var(--color-light-light);
 }
 
 .header__container {
@@ -23,7 +27,7 @@
 }
 
 .header__link {
-  color:  #363130;
+  color: var(--color-link-light);
   text-decoration: none;
 }
 
@@ -38,7 +42,7 @@
   width: 80px;
 }
 
-.header__ball {
+.header__circle {
   border-radius: 50%;
   background-color: #9E9EA4;
   height: 25px;
@@ -51,16 +55,4 @@
 .active {
   left: 60%;
   transition: 0.2s ease;
-}
-
-.darkHeader {
-  background-color: #120907;
-
-  a {
-    color: #fff;
-  }
-}
-
-.darkBody {
-  background-color: #222137;
 }

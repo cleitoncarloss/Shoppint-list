@@ -8,5 +8,6 @@
 }
 
 .footer__information {
+  color: var(--color-list-light);
   display: block ruby;
 }

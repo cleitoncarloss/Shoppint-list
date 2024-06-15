@@ -1,0 +1,17 @@
+:root {
+  --color-lightest-light: #B7B7BE;
+  --color-light-light: #dadadf;
+  --color-Minlight-light: #9E9EA4;
+  --color-link-light: #363130;
+  --color-body-light: #ffffff;
+  --color-list-light: #000000;
+}
+
+.dark {
+  --color-lightest-light: #000000;
+  --color-light-light: #212125;
+  --color-Minlight-light: #495664;
+  --color-link-light: #ffffff;
+  --color-body-light: #29292d;
+  --color-list-light: #ffffff;
+}

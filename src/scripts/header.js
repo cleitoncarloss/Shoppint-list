@@ -18,20 +18,31 @@ class Header extends HTMLElement {
             <a class='header__link' href="../index.html">home</a>
             <a class='header__link' href="../lista.html">ver lista</a>
             <div class='header__button'>
-              <div class='header__ball'></div>
+              <div class='header__circle'></div>
             </div>
           </nav>
         </div>
       </header>
     `
+    const theme = localStorage.getItem('mode')
+    if (theme) {
+      document.querySelector('body').classList.add('dark')
+      this.shadowRoot.querySelector('.header__circle').classList.add('active')
+    }
 
     this.shadowRoot.querySelector('.header__button').addEventListener('click', this.darkMode.bind(this))
   }
 
   darkMode() {
-    this.shadowRoot.querySelector('.header__ball').classList.toggle('active')
-    this.shadowRoot.querySelector('.header').classList.toggle('darkHeader')
-    document.querySelector('body').classList.toggle('darkBody')
+    this.shadowRoot.querySelector('.header__circle').classList.toggle('active')
+    const body = document.querySelector('body')
+    body.classList.toggle('dark')
+
+    if (body.classList.contains('dark')) {
+      localStorage.setItem('mode', 'dark')
+    } else {
+      localStorage.removeItem('mode')
+    }
   }
 }
 
