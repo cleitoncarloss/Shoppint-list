@@ -24,9 +24,9 @@ class Header extends HTMLElement {
         </div>
       </header>
     `
-    const theme = localStorage.getItem('mode')
-    if (theme) {
-      document.querySelector('body').classList.add('dark')
+ 
+    if (localStorage.getItem('theme')) {
+      document.querySelector('body').setAttribute('class', 'dark')
       this.shadowRoot.querySelector('.header__circle').classList.add('active')
     }
 
@@ -38,11 +38,7 @@ class Header extends HTMLElement {
     const body = document.querySelector('body')
     body.classList.toggle('dark')
 
-    if (body.classList.contains('dark')) {
-      localStorage.setItem('mode', 'dark')
-    } else {
-      localStorage.removeItem('mode')
-    }
+    body.classList.contains('dark') ? localStorage.setItem('theme', 'dark') : localStorage.removeItem('theme')
   }
 }
 
