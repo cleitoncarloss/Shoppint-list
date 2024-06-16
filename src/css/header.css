@@ -1,9 +1,9 @@
 body {
-  background-color: var(--color-body-light);
+  background-color: var(--color-background-body);
 }
 
 .header {
-  background-color: var(--color-light-light);
+  background-color: var(--color-background-header);
 }
 
 .header__container {
@@ -27,7 +27,7 @@ body {
 }
 
 .header__link {
-  color: var(--color-link-light);
+  color: var(--color-link);
   text-decoration: none;
 }
 

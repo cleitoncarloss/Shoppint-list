@@ -23,7 +23,7 @@
 }
 
 .content__list {
-  color: var(--color-list-light);
+  color: var(--color-text);
 }
 
 .content__buttonEdit, 
