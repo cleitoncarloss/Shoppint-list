@@ -10,7 +10,7 @@ buttonDelete.forEach(button => {
 	
 		father.remove()
 
-		const { data } = await supabase
+		await supabase 
 			.from('users')
 			.delete()
 			.eq('name', text)
