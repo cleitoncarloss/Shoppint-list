@@ -2,7 +2,7 @@ import supabase from "./supabase.js"
 
 const valueList = document.querySelector('.content__value')
 async function insert() {
-  const { data } = await supabase
+  await supabase
     .from('users')
     .insert({ name: valueList.value })
 }
