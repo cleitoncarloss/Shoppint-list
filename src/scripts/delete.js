@@ -1,16 +1,17 @@
 import supabase from './supabase.js'
-import buttonDelete from './list.js'
+import { buttonDelete } from './list.js'
 
 let text
 buttonDelete.forEach(button => {
 	button.addEventListener('click', async function() {
+		console.log(buttonEdit)
 		const brother = button.parentElement
 		const father = brother.parentElement
 		text = father.children[0].textContent
-	
+
 		father.remove()
 
-		await supabase 
+		await supabase
 			.from('users')
 			.delete()
 			.eq('name', text)
