@@ -11,6 +11,7 @@ buttonEdit.forEach(button => {
     
     const section = document.createElement('section')
     section.innerHTML = componentEdit(text.textContent)
+    section.classList.add('edit')
     content.append(section)
 
     document.querySelector('.edit__save').addEventListener('click', async () => {
