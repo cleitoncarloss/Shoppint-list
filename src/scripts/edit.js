@@ -13,7 +13,7 @@ buttonEdit.forEach(button => {
     section.innerHTML = componentEdit(text.textContent)
     content.append(section)
 
-    document.querySelector('.edit__save').addEventListener('click', async (e) => {
+    document.querySelector('.edit__save').addEventListener('click', async () => {
       const input = document.querySelector('.edit__input')
       
       await supabase
