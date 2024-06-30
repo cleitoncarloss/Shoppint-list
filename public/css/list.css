@@ -1,0 +1,88 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 24px;
+}
+
+.content__container {
+  align-items: center;
+  display: flex;
+  border: 1px solid #dadadf;
+  border-radius: 10px;
+  justify-content: space-between;
+  max-width: 670px;
+  padding: 10px;
+}
+
+.content__figure {
+  display: flex;
+  gap: 15px;
+}
+
+.content__list {
+  color: var(--color-text);
+}
+
+.content__buttonEdit, 
+.content__buttonDelete {
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+}
+
+.edit {
+  background-color: #bababf;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  position: fixed;
+  left: 50%;
+  height: 200px;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 40px;
+  right: 50%;
+  width: max-content;
+  transform: translate(-50%, -50%);
+}
+
+.edit__buttonClose {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+}
+
+.edit__input {
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+
+.edit__save {
+  background-color: #706F6F;
+  border-radius: 5px;
+  color: #FBF3F3;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+@media(width >= 670px) {
+  .content {
+    padding: 24px 0 0 0; 
+    width: fit-content;
+  }
+
+  .content__container {
+    width: 600px;
+  }
+}
