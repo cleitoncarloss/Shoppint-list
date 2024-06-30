@@ -28,6 +28,7 @@ class Header extends HTMLElement {
     if (localStorage.getItem('theme')) {
       document.querySelector('body').setAttribute('class', 'dark')
       this.shadowRoot.querySelector('.header__circle').classList.add('active')
+      this.shadowRoot.querySelector('.header__logo').src = './images/whiteLogo.png'
     }
 
     this.shadowRoot.querySelector('.header__button').addEventListener('click', this.darkMode.bind(this))
@@ -37,8 +38,14 @@ class Header extends HTMLElement {
     this.shadowRoot.querySelector('.header__circle').classList.toggle('active')
     const body = document.querySelector('body')
     body.classList.toggle('dark')
-
-    body.classList.contains('dark') ? localStorage.setItem('theme', 'dark') : localStorage.removeItem('theme')
+    
+    if(body.classList.contains('dark')) {
+      localStorage.setItem('theme', 'dark')
+      this.shadowRoot.querySelector('.header__logo').src = './images/whiteLogo.png'
+    } else {
+      localStorage.removeItem('theme')
+      this.shadowRoot.querySelector('.header__logo').src = './images/logo.png'
+    }
   }
 }
 
