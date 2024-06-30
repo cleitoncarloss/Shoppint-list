@@ -8,16 +8,22 @@ buttonEdit.forEach(button => {
     const brother = button.parentElement
     const father = brother.parentElement
     let text = father.children[0]
-    content.innerHTML += (componentEdit(text.textContent))
+    
+    const section = document.createElement('section')
+    section.innerHTML = componentEdit(text.textContent)
+    content.append(section)
 
-    document.querySelector('.edit__save').addEventListener('click', async () => {
+    document.querySelector('.edit__save').addEventListener('click', async (e) => {
       const input = document.querySelector('.edit__input')
-
+      
       await supabase
-        .from('users')
-        .update({ name: input.value })
-        .eq('id', '758858d7-16fc-4eb6-a550-19a851cc33aa')
-        .select()
+      .from('users')
+      .update({ name: input.value })
+      .eq('name', text.textContent)
+      .select()
+      
+      text.textContent = input.value
+      input.value = ''
     })
   })
 })
