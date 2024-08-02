@@ -2,5 +2,5 @@
 /package-lock.json
 /src/scripts/supabase.js
 /github
-/firebase
+/.firebase
 /dist
