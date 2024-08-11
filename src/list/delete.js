@@ -1,4 +1,4 @@
-import supabase from './supabase.js'
+import supabase from '../supabase.js'
 import { buttonDelete } from './list.js'
 
 buttonDelete.forEach(button => {

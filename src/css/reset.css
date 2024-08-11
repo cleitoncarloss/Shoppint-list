@@ -7,8 +7,13 @@
 img {
   max-width: 100;
 }
+
+a {
+  text-decoration: none;
+}
  
 body {
+  background-color: var(--color-background-body);
   font-family: sans-serif;
   margin: 0;
 }

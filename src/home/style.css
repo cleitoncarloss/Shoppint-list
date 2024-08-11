@@ -1,7 +1,3 @@
-body {
-  background-color: var(--color-background-body);
-}
-
 .content {
   max-width: 1440px;
   margin: 0 auto;
@@ -64,4 +60,18 @@ body {
   cursor: pointer;
   font-size: 16px;
   font-weight: 500;
+}
+
+.footer {
+  bottom: 20px;
+  left: 50%;
+  margin: 0 auto;
+  max-width: 1440px;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.footer__information {
+  color: var(--color-text);
+  display: block ruby;
 }

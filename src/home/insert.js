@@ -1,4 +1,4 @@
-import supabase from "./supabase.js"
+import supabase from '../supabase.js'
 
 const valueList = document.querySelector('.content__value')
 async function insert() {
@@ -10,3 +10,4 @@ async function insert() {
 }
 
 document.querySelector('.content__save').addEventListener('click', insert)
+export default insert

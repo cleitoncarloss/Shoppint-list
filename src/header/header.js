@@ -6,17 +6,17 @@ class Header extends HTMLElement {
 
   connectedCallback() {
     this.shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="../css/header.css" />      
+      <link rel="stylesheet" href='../header/style.css' />      
 
       <header class='header'>
         <div class='header__container'>
-          <a href='../index.html'>
-            <img class='header__logo' src='./images/logo.png' alt='imagem do logo' />
+          <a href='../home/index.html'>
+            <img class='header__logo' src='../header/logo.png' alt='Logo' />
           </a>
 
           <nav class='header__navigation'>
-            <a class='header__link' href="../index.html">home</a>
-            <a class='header__link' href="../lista.html">ver lista</a>
+            <a class='header__link' href="../home/index.html">home</a>
+            <a class='header__link' href="../list/list.html">ver lista</a>
             <div class='header__button'>
               <div class='header__circle'></div>
             </div>
@@ -24,11 +24,10 @@ class Header extends HTMLElement {
         </div>
       </header>
     `
- 
     if (localStorage.getItem('theme')) {
       document.querySelector('body').setAttribute('class', 'dark')
       this.shadowRoot.querySelector('.header__circle').classList.add('active')
-      this.shadowRoot.querySelector('.header__logo').src = './images/whiteLogo.png'
+      this.shadowRoot.querySelector('.header__logo').src = '../header/whiteLogo.png' 
     }
 
     this.shadowRoot.querySelector('.header__button').addEventListener('click', this.darkMode.bind(this))
@@ -41,10 +40,10 @@ class Header extends HTMLElement {
     
     if(body.classList.contains('dark')) {
       localStorage.setItem('theme', 'dark')
-      this.shadowRoot.querySelector('.header__logo').src = './images/whiteLogo.png'
+      this.shadowRoot.querySelector('.header__logo').src = '../header/whiteLogo.png' 
     } else {
       localStorage.removeItem('theme')
-      this.shadowRoot.querySelector('.header__logo').src = './images/logo.png'
+      this.shadowRoot.querySelector('.header__logo').src = '../header/logo.png' 
     }
   }
 }
