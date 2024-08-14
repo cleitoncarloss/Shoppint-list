@@ -1,3 +1,6 @@
+import logo from 'assets/logo.png'
+import whiteLogo from 'assets/whiteLogo.png'
+
 class Header extends HTMLElement {
   constructor() {
     super()
@@ -6,12 +9,12 @@ class Header extends HTMLElement {
 
   connectedCallback() {
     this.shadowRoot.innerHTML = `
-      <link rel="stylesheet" href='../header/style.css' />      
+      <link rel="stylesheet" href='./css/style.css' />      
 
       <header class='header'>
         <div class='header__container'>
           <a href='../home/index.html'>
-            <img class='header__logo' src='../header/logo.png' alt='Logo' />
+            <img class='header__logo' src='${logo}' alt='Logo' />
           </a>
 
           <nav class='header__navigation'>
@@ -27,7 +30,7 @@ class Header extends HTMLElement {
     if (localStorage.getItem('theme')) {
       document.querySelector('body').setAttribute('class', 'dark')
       this.shadowRoot.querySelector('.header__circle').classList.add('active')
-      this.shadowRoot.querySelector('.header__logo').src = '../header/whiteLogo.png' 
+      this.shadowRoot.querySelector('.header__logo').src = `${whiteLogo}` 
     }
 
     this.shadowRoot.querySelector('.header__button').addEventListener('click', this.darkMode.bind(this))
@@ -40,12 +43,12 @@ class Header extends HTMLElement {
     
     if(body.classList.contains('dark')) {
       localStorage.setItem('theme', 'dark')
-      this.shadowRoot.querySelector('.header__logo').src = '../header/whiteLogo.png' 
+      this.shadowRoot.querySelector('.header__logo').src = `${whiteLogo}` 
     } else {
       localStorage.removeItem('theme')
-      this.shadowRoot.querySelector('.header__logo').src = '../header/logo.png' 
+      this.shadowRoot.querySelector('.header__logo').src = `${logo}` 
     }
   }
 }
 
-customElements.define('c-header', Header)
+export default Header
