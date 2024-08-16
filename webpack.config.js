@@ -29,6 +29,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/home/index.html'
     }),
+    new HtmlWebpackPlugin({
+      template: './src/list/list.html',
+      filename: 'list.html'
+    }),
     new CopyWebpackPlugin({
       patterns: [
         { from: './src/header/style.css', to: 'css' },

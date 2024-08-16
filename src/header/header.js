@@ -18,8 +18,8 @@ class Header extends HTMLElement {
           </a>
 
           <nav class='header__navigation'>
-            <a class='header__link' href="../home/index.html">home</a>
-            <a class='header__link' href="../list/list.html">ver lista</a>
+            <a class='header__link' href="index.html">home</a>
+            <a class='header__link' href="./list.html">ver lista</a>
             <div class='header__button'>
               <div class='header__circle'></div>
             </div>
