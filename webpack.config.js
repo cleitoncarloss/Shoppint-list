@@ -4,10 +4,13 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: {
+    home: './src/home.js',
+    list: './src/list.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'), 
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
   },
   module: {
     rules: [
@@ -27,16 +30,19 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/home/index.html'
+      template: './src/home/index.html',
+      chunks: ['home']
     }),
     new HtmlWebpackPlugin({
       template: './src/list/list.html',
-      filename: 'list.html'
+      filename: 'list.html',
+      chunks: ['list']
     }),
     new CopyWebpackPlugin({
       patterns: [
         { from: './src/header/style.css', to: 'css' },
         { from: './src/home/home.css', to: 'css' },
+        { from: './src/list/list.css', to: 'css' },
         { from: './src/css/reset.css', to: 'css' },
         { from: './src/css/colors.css', to: 'css' },
       ]
