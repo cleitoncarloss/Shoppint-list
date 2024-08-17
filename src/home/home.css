@@ -31,6 +31,8 @@
 .content__title {
   color: #fff;
   font-weight: bold;
+  font-size: 32px; 
+  line-height: 0.9;
   padding-bottom: 30px;
   text-align: center;
   width: 200px;
@@ -44,6 +46,7 @@
 }
 
 .content__value {
+  padding: 15px 10px;
   outline: none;
 }
 
@@ -58,8 +61,8 @@
   background-color: #706F6F; 
   color: #FBF3F3; 
   cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 19px;
+  font-weight: bold;
 }
 
 .footer {
@@ -68,10 +71,10 @@
   margin: 0 auto;
   max-width: 1440px;
   position: absolute;
+  text-align: center;
   transform: translateX(-50%);
 }
 
 .footer__information {
   color: var(--color-text);
-  display: block ruby;
 }
